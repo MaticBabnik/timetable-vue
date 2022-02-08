@@ -7,7 +7,12 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@apollo/client": "^3.5.8",
+    "@vue/apollo-option": "^4.0.0-alpha.16",
     "core-js": "^3.6.5",
+    "graphql": "^16.3.0",
+    "graphql-tag": "^2.12.6",
+    "style-resources-loader": "^1.5.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
   },

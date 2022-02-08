@@ -1,0 +1,518 @@
+{
+    "data": {
+      "classTimetable": {
+        "scheduleDefinitions": [
+          {
+            "from": "7:30",
+            "to": "8:15"
+          },
+          {
+            "from": "8:20",
+            "to": "9:05"
+          },
+          {
+            "from": "9:10",
+            "to": "9:55"
+          },
+          {
+            "from": "10:00",
+            "to": "10:45"
+          },
+          {
+            "from": "11:05",
+            "to": "11:50"
+          },
+          {
+            "from": "11:55",
+            "to": "12:40"
+          },
+          {
+            "from": "12:45",
+            "to": "13:30"
+          },
+          {
+            "from": "13:35",
+            "to": "14:20"
+          },
+          {
+            "from": "14:25",
+            "to": "15:10"
+          },
+          {
+            "from": "15:30",
+            "to": "16:15"
+          },
+          {
+            "from": "16:20",
+            "to": "17:05"
+          },
+          {
+            "from": "17:10",
+            "to": "17:55"
+          },
+          {
+            "from": "18:00",
+            "to": "18:45"
+          },
+          {
+            "from": "18:50",
+            "to": "19:35"
+          }
+        ],
+        "days": [
+          {
+            "lessons": [
+              [
+                {
+                  "name": "OMTp",
+                  "room": "K2",
+                  "teacher": "M. Tomšič",
+                  "flags": []
+                },
+                {
+                  "name": "RPAv",
+                  "room": "K12",
+                  "teacher": "D. Toth",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "OMTp",
+                  "room": "K2",
+                  "teacher": "M. Tomšič",
+                  "flags": []
+                },
+                {
+                  "name": "RPAv",
+                  "room": "K12",
+                  "teacher": "D. Toth",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "SLO",
+                  "room": "115",
+                  "teacher": "Š. Suhadolnik",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "SLO",
+                  "room": "115",
+                  "teacher": "Š. Suhadolnik",
+                  "flags": [
+                    "REPLACEMENT"
+                  ]
+                }
+              ],
+              [
+                {
+                  "name": "MAT",
+                  "room": "115",
+                  "teacher": "L. Vintar",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "MAT",
+                  "room": "115",
+                  "teacher": "L. Vintar",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "ANG1",
+                  "room": "115",
+                  "teacher": "M. Fink",
+                  "flags": []
+                }
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "lessons": [
+              [],
+              [
+                {
+                  "name": "ANG1",
+                  "room": "115",
+                  "teacher": "M. Fink",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "RVPp",
+                  "room": "116",
+                  "teacher": "M. Krišelj",
+                  "flags": []
+                },
+                {
+                  "name": "RVPv",
+                  "room": "117",
+                  "teacher": "M. Setničar",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "RVPp",
+                  "room": "116",
+                  "teacher": "M. Krišelj",
+                  "flags": []
+                },
+                {
+                  "name": "RVPv",
+                  "room": "117",
+                  "teacher": "M. Setničar",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "FIZ",
+                  "room": "207",
+                  "teacher": "A. Guštin",
+                  "flags": [
+                    "REPLACEMENT"
+                  ]
+                }
+              ],
+              [
+                {
+                  "name": "FIZ",
+                  "room": "207",
+                  "teacher": "A. Guštin",
+                  "flags": [
+                    "REPLACEMENT"
+                  ]
+                }
+              ],
+              [
+                {
+                  "name": "PPBv",
+                  "room": "107",
+                  "teacher": "U. Cankar",
+                  "flags": [
+                    "SUBSTITUTE"
+                  ]
+                },
+                {
+                  "name": "PPBp",
+                  "room": "106",
+                  "teacher": "A. Lazarević",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "PPBv",
+                  "room": "107",
+                  "teacher": "U. Cankar",
+                  "flags": [
+                    "SUBSTITUTE"
+                  ]
+                },
+                {
+                  "name": "PPBp",
+                  "room": "106",
+                  "teacher": "A. Lazarević",
+                  "flags": []
+                }
+              ],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "lessons": [
+              [],
+              [],
+              [],
+              [],
+              [
+                {
+                  "name": "MAT",
+                  "room": "218",
+                  "teacher": "L. Vintar",
+                  "flags": []
+                }
+              ],
+              [],
+              [],
+              [
+                {
+                  "name": "OMT",
+                  "room": "115",
+                  "teacher": "A. Ajanović",
+                  "flags": []
+                },
+                {
+                  "name": "RPA",
+                  "room": "K11",
+                  "teacher": "D. Toth",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "IKP2",
+                  "room": "115",
+                  "teacher": "D. Sitar",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "IKP2",
+                  "room": "115",
+                  "teacher": "D. Sitar",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "RVP",
+                  "room": "115",
+                  "teacher": "M. Setničar",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "VOSv",
+                  "room": "107",
+                  "teacher": "T. Kocjan",
+                  "flags": [
+                    "CANCELED"
+                  ]
+                },
+                {
+                  "name": "VOSp",
+                  "room": "11",
+                  "teacher": "M. Krišelj",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "VOSv",
+                  "room": "107",
+                  "teacher": "T. Kocjan",
+                  "flags": [
+                    "CANCELED"
+                  ]
+                },
+                {
+                  "name": "VOSp",
+                  "room": "11",
+                  "teacher": "M. Krišelj",
+                  "flags": []
+                }
+              ],
+              []
+            ]
+          },
+          {
+            "lessons": [
+              [
+                {
+                  "name": "PPB",
+                  "room": "115",
+                  "teacher": "M. Kompolšek",
+                  "flags": [
+                    "CANCELED"
+                  ]
+                }
+              ],
+              [
+                {
+                  "name": "SLO",
+                  "room": "115",
+                  "teacher": "Š. Suhadolnik",
+                  "flags": [
+                    "REPLACEMENT"
+                  ]
+                }
+              ],
+              [
+                {
+                  "name": "SLO",
+                  "room": "115",
+                  "teacher": "Š. Suhadolnik",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "SLO",
+                  "room": "115",
+                  "teacher": "Š. Suhadolnik",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "OMT",
+                  "room": "115",
+                  "teacher": "A. Ajanović",
+                  "flags": []
+                },
+                {
+                  "name": "RPA",
+                  "room": "K11",
+                  "teacher": "D. Toth",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "OMT",
+                  "room": "115",
+                  "teacher": "A. Ajanović",
+                  "flags": []
+                },
+                {
+                  "name": "RPA",
+                  "room": "K11",
+                  "teacher": "D. Toth",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "ANG1",
+                  "room": "115",
+                  "teacher": "M. Fink",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "ŠVZd",
+                  "room": "TEL",
+                  "teacher": "Ž. Maslo Plečnik",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "ŠVZd",
+                  "room": "TEL",
+                  "teacher": "Ž. Maslo Plečnik",
+                  "flags": []
+                }
+              ],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          },
+          {
+            "lessons": [
+              [
+                {
+                  "name": "OVE",
+                  "room": "115",
+                  "teacher": "U. Breskvar",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "OVE",
+                  "room": "115",
+                  "teacher": "U. Breskvar",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "MAT",
+                  "room": "115",
+                  "teacher": "L. Vintar",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "ŠVZ",
+                  "room": "TEL",
+                  "teacher": "J. Leskovec",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "ŠVZ",
+                  "room": "TEL",
+                  "teacher": "J. Leskovec",
+                  "flags": []
+                },
+                {
+                  "name": "DSP",
+                  "room": "7",
+                  "teacher": "K. Kotnik Ivačič",
+                  "flags": []
+                }
+              ],
+              [
+                {
+                  "name": "ŠVZ",
+                  "room": "115",
+                  "teacher": "J. Leskovec",
+                  "flags": [
+                    "REPLACEMENT"
+                  ]
+                }
+              ],
+              [
+                {
+                  "name": "VOS",
+                  "room": "115",
+                  "teacher": "T. Kocjan",
+                  "flags": [
+                    "CANCELED"
+                  ]
+                }
+              ],
+              [],
+              [
+                {
+                  "name": "IDE-KUD",
+                  "room": "?",
+                  "teacher": "?",
+                  "flags": [
+                    "EVENT"
+                  ]
+                }
+              ],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ]
+      }
+    }
+  }

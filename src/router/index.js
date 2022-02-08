@@ -3,8 +3,13 @@ import Home from '../views/Home.vue'
 
 const routes = [
   {
-    path: '/',
+    path:'/',
     name: 'Home',
+    component: Home
+  },
+  {
+    path: '/t/:type/:key',
+    name: 'Timetable',
     component: Home
   },
   {
