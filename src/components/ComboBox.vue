@@ -27,24 +27,32 @@ export default {
     data() {
         return {
             selected: null,
+            closeGlobal: false,
             expanded: false,
         };
     },
     methods: {
         toggle(e) {
             this.expanded = !this.expanded;
-            e.stopPropagation();
+            this.closeGlobal = false;
         },
         select(value) {
             this.selected = value.key;
             this.$emit("update:selectedKey", value.key);
-                this.$emit("change", value.key);
+            this.$emit("change", value.key);
+        },
+        globalClick() {
+            if (this.closeGlobal) this.expanded = false;
+            else {
+                this.closeGlobal = true;
+            }
         },
     },
     computed: {
         selectedDisplay() {
-            return this.options?.find((x) => x.key === this.selectedKey ?? this.selected)
-                ?.display;
+            return this.options?.find(
+                (x) => x.key === this.selectedKey ?? this.selected
+            )?.display;
         },
     },
     mounted() {

@@ -4,13 +4,17 @@
             :timetabledata="timetable"
             v-if="timetableSelected && !isloading && !!timetable"
         />
-        <h1 v-else-if="timetableSelected && !isloading">
-            ⚠ Ne morem ti naloziti urnika 👷‍♂️👎
+        <h1 class="error" v-else-if="timetableSelected && !isloading">
+            Error!
+            <br>
+            (try selecting the timetable again)
+            <br>
+            <router-link to="/" >Go Home</router-link>
         </h1>
-        <h1 v-else-if="timetableSelected && isloading">
-            Nalagam ti urnik 🔧👷‍♂️
+        <h1 class="loading" v-else-if="timetableSelected && isloading">
+            Loading...
         </h1>
-        <h1 v-else>Izberi urnik da ti ga nalozim... 👷‍♂️👍</h1>
+        <h1 class="home" v-else>Select a timetable...</h1>
     </div>
 </template>
 
@@ -130,3 +134,15 @@ export default {
     },
 };
 </script>
+
+<style lang="less">
+.error {
+    color: @red;
+}
+.loading {
+    color: @green;
+}
+.home {
+    color: @blue;
+}
+</style>
