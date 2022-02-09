@@ -7,26 +7,44 @@
             borderLeft: `0.3rem hsl(${color},80%,40%) solid`,
         }"
     >
-        <span class="title"> {{ lesson.name }} </span>
-        <span v-if="showRoom" class="room">{{ lesson.room }}</span>
-        <span v-if="showClass" class="class">{{ lesson.className }}</span>
-        <span v-if="showTeacher" class="teacher">{{ lesson.teacher }}</span>
-        <span v-if="showTeacher" class="teacher-short">{{ shortTeacher }}</span>
+        <span class="title">
+            {{ lesson.name }}
+            <span
+                class="flag-icon"
+                v-for="flag in shownFlags"
+                :key="flag"
+                :title="flag"
+            >
+                {{ flag[0] }}
+            </span>
+        </span>
+        <span v-if="showRoom" @click="goToRoom" class="room">{{
+            lesson.room
+        }}</span>
+        <span v-if="showClass" @click="goToClass" class="class">{{
+            lesson.className
+        }}</span>
+        <span v-if="showTeacher" @click="goToTeacher" class="teacher">{{
+            lesson.teacher
+        }}</span>
+        <span v-if="showTeacher" @click="goToTeacher" class="teacher-short">{{
+            shortTeacher
+        }}</span>
     </div>
 </template>
 
 <script>
 const NAME_SHORTEN_REGEX = /([\wčžćšđ]{2,})/gi;
 const FLAG_WHITELIST = [
-  "SUBSTITUTE",
-  "REPLACEMENT",
-  "NOTDONE",
-  "EVENT",
-  "OFFICEHOURS",
-  "HALFTIME",
-  "CLUB",
-  "ONLINE",
-  "EXAM",
+    "SUBSTITUTE",
+    "REPLACEMENT",
+    "NOTDONE",
+    "EVENT",
+    "OFFICEHOURS",
+    "HALFTIME",
+    "CLUB",
+    "ONLINE",
+    "EXAM",
 ];
 
 export default {
@@ -66,6 +84,32 @@ export default {
             );
         },
     },
+    methods: {
+        goToRoom() {
+            this.$router.push({
+                name: "Timetable",
+                params: {
+                    type: "classrooms",
+                    key: this.lesson.room,
+                },
+            });
+        },
+        goToClass() {
+            this.$router.push({
+                name: "Timetable",
+                params: { type: "classes", key: this.lesson.className },
+            });
+        },
+        goToTeacher() {
+            this.$router.push({
+                name: "Timetable",
+                params: {
+                    type: "teachers",
+                    key: this.lesson.teacher,
+                },
+            });
+        },
+    },
 };
 </script>
 
@@ -93,6 +137,18 @@ export default {
 
     .title {
         font-weight: bold;
+        width: 100%;
+        .flag-icon {
+            user-select: none;
+            float: right;
+            display: inline-block;
+            background-color: @dark0;
+            border: 2px solid @blue;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            text-align: center;
+        }
     }
 
     .teacher,
@@ -100,6 +156,16 @@ export default {
         height: 1rem;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+
+    .teacher,
+    .teacher-short,
+    .room,
+    .class {
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 

@@ -1,24 +1,29 @@
 <template>
     <div id="nav">
-        <h1 id="title">
-            {{ env.title }}<span id="version">{{ env.ver }}</span>
-        </h1>
+        <div id="title">
+            <h1>
+                {{ env.title }}<span id="version">{{ env.ver }}</span>
+            </h1>
+        </div>
 
-        <combo-box
-            placeholder="Mode"
-            :options="modes"
-            v-model:selectedKey="viewType"
-        />
-        <combo-box
-            placeholder=" "
-            :options="opts"
-            v-model:selectedKey="viewParam"
-            @change="onchange"
-        />
+        <div id="combo-container">
+            <combo-box
+                id="mode"
+                placeholder="Mode"
+                :options="modes"
+                v-model:selectedKey="viewType"
+            />
+            <combo-box
+                id="param"
+                placeholder=" "
+                :options="opts"
+                v-model:selectedKey="viewParam"
+                @change="onchange"
+            />
+        </div>
 
-        <div style="flex: 1"></div>
-
-        <router-link to="/about">About</router-link>
+        <router-link to="/about"><span> About </span></router-link>
+        <!-- <a href="">about</a> -->
     </div>
     <router-view :key="$route.fullPath" />
 </template>
@@ -78,19 +83,62 @@ export default {
                 });
             }
         },
+        async updateCombo() {
+            this.viewType = this.$route.params?.type ?? "";
+            this.viewParam = this.$route.params?.key ?? "";
+        },
+    },
+    async mounted() {
+        await this.$router.isReady();
+
+        this.updateCombo();
+        this.$router.afterEach(this.updateCombo);
     },
 };
 </script>
 
 <style lang="less">
+#mode,
+#param {
+    margin: 0 0.2rem;
+}
+
 #nav {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    align-items: stretch;
     background-color: @dark1;
+    position: relative;
+
+    #combo-container {
+        display: flex;
+        align-items: center;
+
+    }
+
+    a {
+        text-decoration: none;
+        display: grid;
+        place-items: center;
+        margin: 0 .25rem;
+
+        span {
+            padding: 0 1rem;
+        }
+
+        &:hover {
+            background-color: #fff2;
+        }
+
+        &.router-link-active {
+            border-bottom: @red 2px solid;
+        }
+    }
 }
 
-#title {
+#title > h1 {
     color: @red;
     font-size: 3rem;
     padding: 0.25rem;
@@ -100,15 +148,5 @@ export default {
 #version {
     font-size: 1rem;
     vertical-align: bottom;
-}
-
-a.router-link-active {
-    padding: 1rem;
-    text-decoration: none;
-    display: block;
-    &:hover {
-        background-color: #fff2;
-    }
-    height: 100%;
 }
 </style>

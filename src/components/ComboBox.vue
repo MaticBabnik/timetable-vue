@@ -43,7 +43,7 @@ export default {
     },
     computed: {
         selectedDisplay() {
-            return this.options?.find((x) => x.key === this.selected)
+            return this.options?.find((x) => x.key === this.selectedKey ?? this.selected)
                 ?.display;
         },
     },
@@ -96,6 +96,8 @@ export default {
     }
 
     &.expanded .options {
+        z-index: 1000;
+
         position: absolute;
         top: 100%;
         left: -1 * @border-width;
