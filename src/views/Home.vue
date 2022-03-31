@@ -127,6 +127,10 @@ export default {
         this.viewType = this.$route.params.type ?? "";
         this.viewParam = this.$route.params.key ?? "";
 
+        if (this.viewType != "teachers") {
+            this.viewParam = this.viewParam.toUpperCase();
+        }
+
         if (Object.keys(QUERRIES).includes(this.viewType))
             if (!isNullOrEmpty(this.viewParam)) {
                 this.timetableSelected = true;

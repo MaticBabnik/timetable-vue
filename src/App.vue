@@ -93,6 +93,10 @@ export default {
 
         this.updateCombo();
         this.$router.afterEach(this.updateCombo);
+        
+        if (this.viewType != "teachers") {
+            this.viewParam = this.viewParam.toUpperCase();
+        }
     },
 };
 </script>
