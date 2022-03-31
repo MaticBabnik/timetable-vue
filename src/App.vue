@@ -70,7 +70,12 @@ export default {
                 }
             `,
             update(data) {
-                return data;
+                const t = [...data.teachers]
+                return {
+                    classes: data.classes ?? [],
+                    teachers: t.sort() ?? [],
+                    classrooms: data.classrooms ?? [],
+                };
             },
         },
     },
@@ -93,7 +98,7 @@ export default {
 
         this.updateCombo();
         this.$router.afterEach(this.updateCombo);
-        
+
         if (this.viewType != "teachers") {
             this.viewParam = this.viewParam.toUpperCase();
         }
@@ -119,14 +124,13 @@ export default {
     #combo-container {
         display: flex;
         align-items: center;
-
     }
 
     a {
         text-decoration: none;
         display: grid;
         place-items: center;
-        margin: 0 .25rem;
+        margin: 0 0.25rem;
 
         span {
             padding: 0 1rem;
